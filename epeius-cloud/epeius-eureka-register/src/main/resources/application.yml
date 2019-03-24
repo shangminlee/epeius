@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: local # 配置环境
+  devtools:
+    restart:
+      enabled: true
+    add-properties: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 健康检查暴露的内容
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: epeius-front
+server:
+  port: 9001
+
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address} # 服务注册中心实例的主机名
+    prefer-ip-address: true #显示服务ip地址
+    lease-renewal-interval-in-seconds: 5 # 心跳间隔 时间秒
+  client:
+    register-with-eureka: true # 是否向服务注册自己
+    fetch-registry: true # 配置此客户端不获取eureka服务器注册表上的注册信息
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8761/eureka/, http://admin:admin@${eureka.instance.hostname}:8762/eureka/# 指定服务注册中心的位置
+    registry-fetch-interval-seconds: 20 #表示eureka client间隔多久去拉取服务注册信息

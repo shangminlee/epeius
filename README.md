@@ -4,7 +4,7 @@
     基于微服务框架SpringCloud，搭建的快速开发脚手架。
 
 #### 技术选型
-    1. 基础框架：SpringBoot 、Mybatis
+    1. 基础框架：SpringBoot 2.1.0.RELEASE 、SpringCloud Greenwich.RELEASE、Mybatis
     2. 运行环境：Linux、JDK1.8
     3. 数据仓库：MySQL、Redis
     4. 文档框架：Swagger
@@ -16,7 +16,6 @@
         |-- epeius-basic  基础模块
             |-- epeius-common   公共基础模块
             |-- epeius-druid    德鲁伊连接池，侧重监控
-            |-- epeius-redis    redis基础模块
             |-- epeius-swagger  在线文档基础模块
         |-- epeius-server  业务服务模块
             |-- epeius-front 示例服务1

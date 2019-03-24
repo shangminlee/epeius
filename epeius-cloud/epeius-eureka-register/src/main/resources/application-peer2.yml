@@ -1,0 +1,28 @@
+server:
+  port: 8762 # 服务端口
+spring:
+  application:
+    name: epeius-register # 服务名称
+  security: # 安全配置
+    user:
+      name: admin # 用户名
+      password: admin #密码
+
+#-------- 服务注册中心配置 -------#
+eureka:
+  environment: ${spring.profiles.active}
+  server:
+    enable-self-preservation: false # 是否开启自我保护模式
+    eviction-interval-timer-in-ms: 4000 # 清理无效节点时间 毫秒
+    peer-eureka-nodes-update-interval-ms: 10000 #集群之间相互更新节点信息的时间频率
+  instance:
+    hostname: discovery2 #${spring.cloud.client.ip-address} # 服务注册中心实例的主机名
+    prefer-ip-address: false #显示服务ip地址
+    #lease-expiration-duration-in-seconds: 10 # 10秒后，server端没有收到client的心跳，则将摘除该instance
+    lease-renewal-interval-in-seconds: 5 # 心跳间隔 时间秒
+  client:
+    register-with-eureka: true # 是否向服务注册自己
+    #fetch-registry: true # 配置此客户端不获取eureka服务器注册表上的注册信息
+    serviceUrl:
+      defaultZone: http://admin:admin@discovery1:8761/eureka/ # 指定服务注册中心的位置
+    registry-fetch-interval-seconds: 20 #表示eureka client间隔多久去拉取服务注册信息
