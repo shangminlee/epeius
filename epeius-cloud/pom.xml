@@ -13,6 +13,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>epeius-eureka-register</module>
+		<module>epeius-boot-admin</module>
 	</modules>
 
 </project>

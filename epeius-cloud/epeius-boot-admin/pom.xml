@@ -3,19 +3,18 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>epeius-front</artifactId>
+		<artifactId>epeius-cloud</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>epeius-front-app</artifactId>
+	<artifactId>epeius-boot-admin</artifactId>
 
 	<packaging>jar</packaging>
 
 	<dependencies>
 
-		<!-- spring web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -31,7 +30,6 @@
 			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 
-		<!-- 监控信息 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -42,6 +40,24 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+
+		<!-- spring boot admin -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
+		</dependency>
+
+		<!-- security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!-- 邮件通知 -->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-mail</artifactId>-->
+		<!--</dependency>-->
 
 	</dependencies>
 
@@ -59,5 +75,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

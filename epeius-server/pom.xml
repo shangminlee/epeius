@@ -13,6 +13,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>epeius-front</module>
+		<module>epeius-middle</module>
+		<module>epeius-backend</module>
 	</modules>
 
 </project>

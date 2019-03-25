@@ -24,6 +24,8 @@
 
 	<dependencyManagement>
 		<dependencies>
+
+			<!-- spring cloud -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -31,6 +33,29 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+			<!-- spring boot admin -->
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-server</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-starter-server</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-starter-client</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-server-ui</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -38,6 +63,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
 	</properties>
 
 	<build>

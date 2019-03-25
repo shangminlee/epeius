@@ -1,8 +1,8 @@
 spring:
   application:
-    name: epeius-front
+    name: epeius-backend
 server:
-  port: 9001
+  port: 9003
   undertow:
     max-http-post-size: -1B
     # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程,数量和CPU 内核数目一样即可

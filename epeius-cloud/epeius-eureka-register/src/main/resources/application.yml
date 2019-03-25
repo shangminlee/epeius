@@ -5,7 +5,34 @@ spring:
     restart:
       enabled: true
     add-properties: true
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:9004 # spring boot admin register URLs
+#        instance:
+#          metadata:
+#            user.name: admin
+#            user.password: admin
+#        username: admin
+#        password: admin
 
+#---- undertow 容器配置----#
+server:
+  undertow:
+    max-http-post-size: -1B
+    # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程,数量和CPU 内核数目一样即可
+    io-threads: 4
+    # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载  io-threads*8
+    worker-threads: 100
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    # 每块buffer的空间大小,越小的空间被利用越充分
+    buffer-size: 1024
+    # 每个区分配的buffer数量 , 所以pool的大小是buffer-size * buffers-per-region
+    #   buffers-per-region: 1024 # 这个参数不需要写了
+    # 是否分配的直接内存
+    direct-buffers: true
+
+#---- Actuator 服务监控配置 ----#
 management:
   endpoints:
     web:
