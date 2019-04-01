@@ -56,6 +56,21 @@
 				<version>${spring-boot-admin.version}</version>
 			</dependency>
 
+			<!-- Lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -64,6 +79,10 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
+
+		<!-- Dependencies Properties -->
+		<lombok.version>1.16.18</lombok.version>
+		<fastjson.version>1.2.34</fastjson.version>
 	</properties>
 
 	<build>

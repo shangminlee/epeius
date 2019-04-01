@@ -40,3 +40,11 @@ management:
   endpoint:
     health:
       show-details: always
+
+#---- Feign 配置 ---#
+epeius:
+  feign:
+    backend-service: epeius-backend
+feign:
+  hystrix:
+    enabled: true

@@ -21,17 +21,9 @@
             |-- epeius-front                    示例服务1
                 |-- epeius-front-app                控制层（程序启动入口）
                 |-- epeius-front-struct             视图层，发布给消费者使用
-                |-- epeius-front-service            服务层
-            |-- epeius-middle                   示例服务2
-                |-- epeius-middle-app               控制层（程序启动入口）
-                |-- epeius-middle-struct            视图层，发布给消费者使用
-                |-- epeius-middle-service           服务层
-                |-- epeius-middle-data              数据仓储层
-            |-- epeius-backend                  示例服务3
+            |-- epeius-backend                  示例服务2
                 |-- epeius-backend-app              控制层（程序启动入口）
                 |-- epeius-backend-struct           视图层，发布给消费者使用
-                |-- epeius-backend-service          服务层
-                |-- epeius-backend-data             数据仓储层
         |-- epeius-cloud                     SpringCloud组件模块
             |-- epeius-eureka-register          注册中心
             |-- epeius-boot-admin               SpringBoot应用管理
