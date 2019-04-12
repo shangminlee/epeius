@@ -1,5 +1,6 @@
 package com.xxxx.epeius.front;
 
+import com.xxxx.epeius.swagger.annotation.EnableEpeiusSwagger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -15,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableCircuitBreaker
+@EnableEpeiusSwagger
 public class FrontApplication {
 
 	public static void main(String[] args) {

@@ -40,3 +40,15 @@ management:
   endpoint:
     health:
       show-details: always
+
+#----- Swagger 配置 ------#
+swagger:
+  scan-package: com.xxxx.epeius.backend # 扫描的包地址
+  ui:
+    show: true # 是否展示UI界面
+  info:
+    title: 接口文档 # API 文档标题
+    contact: # 联系信息
+      name: arrows # 名字
+      url: http://www.github.com # 主页地址
+      email: shangmlee@foxmail.com # 邮箱

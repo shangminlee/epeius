@@ -1,5 +1,6 @@
 package com.xxxx.epeius.backend;
 
+import com.xxxx.epeius.swagger.annotation.EnableEpeiusSwagger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -11,6 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableEpeiusSwagger
 public class BackendApplication {
 
 	public static void main(String[] args) {

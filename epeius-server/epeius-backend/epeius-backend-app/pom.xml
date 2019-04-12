@@ -26,6 +26,12 @@
 			<artifactId>epeius-backend-service</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.xxxx.epeius</groupId>
+			<artifactId>epeius-swagger</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
