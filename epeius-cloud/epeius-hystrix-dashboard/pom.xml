@@ -3,13 +3,13 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
-		<artifactId>epeius-front</artifactId>
+		<artifactId>epeius-cloud</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>epeius-front-app</artifactId>
+	<artifactId>epeius-hystrix-dashboard</artifactId>
 
 	<packaging>jar</packaging>
 
@@ -17,36 +17,14 @@
 		<!-- owner -->
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
-			<artifactId>epeius-front-struct</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xxxx.epeius</groupId>
-			<artifactId>epeius-backend-struct</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xxxx.epeius</groupId>
-			<artifactId>epeius-swagger</artifactId>
+			<artifactId>epeius-common</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
-		<!-- feign -->
+		<!-- 熔断监控 - hytrix dashboard -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-
-		<!-- 熔断 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
-
-		<!-- 单元测试 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
 		</dependency>
 
 	</dependencies>
@@ -65,5 +43,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

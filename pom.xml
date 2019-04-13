@@ -19,13 +19,12 @@
 
     <groupId>com.xxxx.epeius</groupId>
     <artifactId>epeius</artifactId>
-    <version>${epeius-version}</version>
+    <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
 	<properties>
 		<!-- Project Properties -->
-		<epeius-version>1.0-SNAPSHOT</epeius-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
@@ -117,6 +116,7 @@
 				<version>${commons-io-version}</version>
 			</dependency>
 			<!-- apache commons end -->
+
 
 			<!-- joda time start -->
 			<dependency>

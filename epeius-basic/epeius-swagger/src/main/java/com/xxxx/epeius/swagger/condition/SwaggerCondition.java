@@ -1,6 +1,5 @@
 package com.xxxx.epeius.swagger.condition;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
@@ -14,8 +13,7 @@ public class SwaggerCondition implements Condition {
 
 	@Override
 	public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
-		String scanPackage = conditionContext.getEnvironment().getProperty("swagger.scan-package");
-		return StringUtils.isNotBlank(scanPackage);
+		return Boolean.parseBoolean(conditionContext.getEnvironment().getProperty("swagger.show"));
 	}
 
 }

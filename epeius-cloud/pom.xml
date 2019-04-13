@@ -14,6 +14,8 @@
 	<modules>
 		<module>epeius-eureka-register</module>
 		<module>epeius-boot-admin</module>
+		<module>epeius-hystrix-dashboard</module>
+		<module>epeius-turbine-dashboard</module>
 	</modules>
 
 </project>

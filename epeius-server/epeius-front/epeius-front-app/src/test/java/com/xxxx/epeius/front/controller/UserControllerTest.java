@@ -44,8 +44,8 @@ public class UserControllerTest {
 				.perform(
 						MockMvcRequestBuilders
 								.get("/user")
+								.param("username","success")
 								.contentType(MediaType.APPLICATION_JSON_UTF8)
-
 				)
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andDo(MockMvcResultHandlers.print())
@@ -54,7 +54,7 @@ public class UserControllerTest {
 	}
 
 	/**
-	 *
+	 * 测试时候创建成功 -- Http POST
 	 */
 	@Test
 	public void whenCreateUserSuccess() throws Exception {

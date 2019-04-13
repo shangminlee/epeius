@@ -43,12 +43,19 @@ management:
 
 #----- Swagger 配置 ------#
 swagger:
+  show: true  # 是否展示UI界面和嵌入swagger
   scan-package: com.xxxx.epeius.backend # 扫描的包地址
-  ui:
-    show: true # 是否展示UI界面
   info:
     title: 接口文档 # API 文档标题
     contact: # 联系信息
       name: arrows # 名字
       url: http://www.github.com # 主页地址
       email: shangmlee@foxmail.com # 邮箱
+
+#---- 日志输出级别配置 -----#
+# 配置日志输出级别，将 Spring 框架设置为 INFO 级别，而我们所编写的代码设置为 DEBUG 级别
+logging:
+  level:
+    org.springframework: INFO
+    com.xxxx.epeius: DEBUG
+  path: /Users/lishangmin/logs/backend.log

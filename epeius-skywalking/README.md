@@ -17,7 +17,7 @@
         - 社区提供的其他多语言探针
             - .NET Core
             - Node.js
-    * 多种数据存储: ElasticSearch、H2
+    * 多种数据存储: ElasticSearch、H2、MySQL
     * 支持 OpenTracing
     	- Java自动探针支持和 OpenTracing API 协同工作
     * 轻量级、完善功能的后端聚合和分析
@@ -25,7 +25,7 @@
     * 应用、实例和服务的告警
 
 #### 下载部署安装
-    1) 安装JDK 去官网找最新的下载授权
+    1) 安装JDK 1.8 去官网找最新的下载授权
         https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
         mv jdk-8u201-linux-x64.rpm\?AuthParam\=1552717822_69b636872bf7df309d90986b51755a89 jdk-8u201-linux-x64.rpm
@@ -83,3 +83,9 @@
         java -javaagent:/path/apache-skywalking-apm-incubating/agent/skywalking-agent.jar -jar demeter-eureka-0.0.1-SNAPSHOT-exec.jar > nohup.out &
       或者
         java -javaagent:/path/apache-skywalking-apm-incubating-bin/agent/skywalking-agent.jar -Dskywalking.agent.service_name=template_app -Dskywalking.collector.backend_service=192.168.43.84:11800 -jar ares-template-app-1.0.0-SNAPSHOT-exec.jar > nohup.out &
+
+#### Intellij IDE 本地调试
+    增加VM参数，示例如下：
+        -javaagent:/Users/lishangmin/apps/apache-skywalking-apm-incubating/agent/skywalking-agent.jar
+        -Dskywalking.agent.service_name=frontend_app
+        -Dskywalking.collector.backend_service=127.0.0.1:11800

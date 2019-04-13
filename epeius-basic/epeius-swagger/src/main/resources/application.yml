@@ -1,7 +1,6 @@
 swagger:
-  scan-package: # 扫描的包地址
-  ui:
-    show: ture # 是否展示UI界面
+  show: true    # 是否展示UI界面
+  scan-package: com.xxxx.epeius# 扫描的包地址
   info:
     title: 接口文档 # API 文档标题
     contact: # 联系信息

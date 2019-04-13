@@ -2,12 +2,14 @@ package com.xxxx.epeius.front.controller;
 
 import com.xxxx.epeius.common.template.Result;
 import com.xxxx.epeius.front.model.User;
+import com.xxxx.epeius.front.struct.UserQueryCondition;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +23,7 @@ import java.util.List;
 public class UserController {
 
 	@GetMapping(value = "/user")
-	public Result<List<User>> query(){
+	public Result<List<User>> query(@Valid UserQueryCondition condition){
 		return Result.success(Arrays.asList(
 				User.builder().username("a").password("123").build(),
 				User.builder().username("b").password("123").build()

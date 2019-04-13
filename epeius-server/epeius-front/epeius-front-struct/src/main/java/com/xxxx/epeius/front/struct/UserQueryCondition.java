@@ -2,6 +2,8 @@ package com.xxxx.epeius.front.struct;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotEmpty;
+
 /**
  * Description: 用户查询条件
  * Author: lishangmin
@@ -10,5 +12,7 @@ import lombok.Data;
 @Data
 public class UserQueryCondition {
 
+	@NotEmpty(message = "用户名不能为空")
+	private String username;
 
 }

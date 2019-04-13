@@ -13,7 +13,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 public class EpeiusSwaggerProperties {
 
-	@Value("${swagger.ui.show:false}")
+	@Value("${swagger.show:false}")
 	private boolean show;
 
 	@Value("${swagger.info.title:}")
