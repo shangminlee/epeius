@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * Description: 用户查询条件
+ * Description: 用户查询条件，优雅的校验
  * Author: lishangmin
  * Created: 2019-04-12 14:30
  */

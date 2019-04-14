@@ -6,8 +6,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -24,11 +22,11 @@ import javax.annotation.Resource;
  * Author: lishangmin
  * Created: 2019-04-12 14:46
  */
-@Configuration
 @Conditional(SwaggerCondition.class)
+@Configuration
 @EnableConfigurationProperties(EpeiusSwaggerProperties.class)
 @EnableSwagger2
-public class EpeiusSwaggerConfiguration extends WebMvcConfigurationSupport {
+public class EpeiusSwaggerConfiguration {
 
 	@Resource
 	EpeiusSwaggerProperties properties;
@@ -52,15 +50,4 @@ public class EpeiusSwaggerConfiguration extends WebMvcConfigurationSupport {
 
 	}
 
-	// 添加Swagger Resource
-	@Override
-	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-		if(properties.isShow()){
-			registry.addResourceHandler("/swagger-ui.html").addResourceLocations(
-					"classpath:/META-INF/resources/");
-			registry.addResourceHandler("/webjars/**").addResourceLocations(
-					"classpath:/META-INF/resources/webjars/");
-		}
-		super.addResourceHandlers(registry);
-	}
 }

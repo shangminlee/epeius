@@ -1,6 +1,6 @@
 package com.xxxx.epeius.eureka.register.config;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * Author: lishangmin
  * Created: 2019-03-24 19:01
  */
-@Configuration
+@SpringBootConfiguration
 public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
 
 	@Override

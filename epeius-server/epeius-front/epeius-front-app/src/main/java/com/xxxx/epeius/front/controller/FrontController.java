@@ -35,6 +35,8 @@ public class FrontController {
 		// 通过Feign 调用第三方微服务
 		UserModel userModel = iBackendService.getUser(UUID.randomUUID().toString()).getData();
 
+		//if(userModel != null) throw new RuntimeException("1111");
+
 		// 组织数据
 		AccountModel account =  AccountModel.builder().name(userModel.getName()).role(userModel.getRole())
 				.userId(UUID.randomUUID().toString()).build();
@@ -43,5 +45,12 @@ public class FrontController {
 		ProposalModel proposalModel = iFrontService.insure(account);
 		return Result.success(proposalModel);
 	}
+
+	// 异常处理, 异常处理统一放到 handler 包下
+	// @ExceptionHandler
+	// public String doError(Exception ex) throws Exception{
+	//	 ex.printStackTrace();
+	//	 return ex.getMessage();
+	// }
 
 }

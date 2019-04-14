@@ -16,6 +16,7 @@
 		<module>epeius-boot-admin</module>
 		<module>epeius-hystrix-dashboard</module>
 		<module>epeius-turbine-dashboard</module>
+		<module>epeius-gateway</module>
 	</modules>
 
 </project>
