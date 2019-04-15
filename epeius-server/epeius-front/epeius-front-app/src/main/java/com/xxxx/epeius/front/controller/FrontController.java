@@ -2,11 +2,15 @@ package com.xxxx.epeius.front.controller;
 
 import com.xxxx.epeius.backend.struct.UserModel;
 import com.xxxx.epeius.common.template.Result;
+import com.xxxx.epeius.front.enums.UserSexEnum;
+import com.xxxx.epeius.front.mapper.UserMapper;
+import com.xxxx.epeius.front.model.User;
 import com.xxxx.epeius.front.service.IBackendService;
 import com.xxxx.epeius.front.service.IFrontService;
 import com.xxxx.epeius.front.struct.AccountModel;
 import com.xxxx.epeius.front.struct.ProposalModel;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,8 +34,12 @@ public class FrontController {
 	@Resource
 	private IBackendService iBackendService;
 
+	@Resource
+	private UserMapper userMapper;
+
 	@GetMapping("/insure")
 	public Result<ProposalModel> insure(){
+
 		// 通过Feign 调用第三方微服务
 		UserModel userModel = iBackendService.getUser(UUID.randomUUID().toString()).getData();
 
@@ -43,6 +51,11 @@ public class FrontController {
 
 		// 调用自己的服务
 		ProposalModel proposalModel = iFrontService.insure(account);
+		// 测试存储
+		User user =new User("neo","123456", UserSexEnum.MAN,"GoodMan");
+		userMapper.insert(user);
+
+		DataSourceBuilder.create().build();
 		return Result.success(proposalModel);
 	}
 
@@ -52,5 +65,7 @@ public class FrontController {
 	//	 ex.printStackTrace();
 	//	 return ex.getMessage();
 	// }
+
+
 
 }

@@ -30,6 +30,11 @@
 			<artifactId>epeius-swagger</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.xxxx.epeius</groupId>
+			<artifactId>epeius-redis</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 
 		<!-- feign -->
 		<dependency>
@@ -48,6 +53,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
+
+		<!-- 数据库 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

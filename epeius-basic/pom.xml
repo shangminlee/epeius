@@ -15,6 +15,7 @@
 	<modules>
 		<module>epeius-common</module>
 		<module>epeius-swagger</module>
+		<module>epeius-redis</module>
 	</modules>
 
 </project>

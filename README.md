@@ -15,7 +15,6 @@
     epeius
         +-- epeius-basic                     基础模块
             +-- epeius-common                   公共基础模块
-            +-- epeius-druid                    德鲁伊连接池，侧重监控
             +-- epeius-swagger                  在线文档基础模块
         +-- epeius-server                    业务服务模块
             +-- epeius-front                    示例服务1

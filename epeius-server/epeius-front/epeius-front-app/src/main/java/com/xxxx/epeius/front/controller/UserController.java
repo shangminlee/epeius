@@ -25,8 +25,8 @@ public class UserController {
 	@GetMapping(value = "/user")
 	public Result<List<User>> query(@Valid UserQueryCondition condition){
 		return Result.success(Arrays.asList(
-				User.builder().username("a").password("123").build(),
-				User.builder().username("b").password("123").build()
+				User.builder().userName("a").password("123").build(),
+				User.builder().userName("b").password("123").build()
 		));
 	}
 

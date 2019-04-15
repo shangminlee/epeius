@@ -1,5 +1,6 @@
 package com.xxxx.epeius.front.model;
 
+import com.xxxx.epeius.front.enums.UserSexEnum;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,10 +13,31 @@ import lombok.Data;
 @Builder
 public class User {
 
-	// 用户名
-	private String username;
+	private Long id;
 
-	// 密码
+	private String userName;
+
 	private String password;
 
+	private UserSexEnum userSex;
+
+	private String nickName;
+
+	public User() {
+	}
+
+	public User(Long id, String userName, String password, UserSexEnum userSex, String nickName) {
+		this.id = id;
+		this.userName = userName;
+		this.password = password;
+		this.userSex = userSex;
+		this.nickName = nickName;
+	}
+
+	public User(String userName, String password, UserSexEnum userSex, String nickName) {
+		this.userName = userName;
+		this.password = password;
+		this.userSex = userSex;
+		this.nickName = nickName;
+	}
 }
