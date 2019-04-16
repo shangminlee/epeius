@@ -64,6 +64,12 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 		</dependency>
 
+		<!-- Rabbit MQ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

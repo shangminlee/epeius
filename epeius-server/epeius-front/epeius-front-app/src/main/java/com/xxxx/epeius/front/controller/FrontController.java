@@ -5,6 +5,7 @@ import com.xxxx.epeius.common.template.Result;
 import com.xxxx.epeius.front.enums.UserSexEnum;
 import com.xxxx.epeius.front.mapper.UserMapper;
 import com.xxxx.epeius.front.model.User;
+import com.xxxx.epeius.front.sender.HelloSender;
 import com.xxxx.epeius.front.service.IBackendService;
 import com.xxxx.epeius.front.service.IFrontService;
 import com.xxxx.epeius.front.struct.AccountModel;
@@ -37,6 +38,9 @@ public class FrontController {
 	@Resource
 	private UserMapper userMapper;
 
+	@Resource
+	private HelloSender helloSender;
+
 	@GetMapping("/insure")
 	public Result<ProposalModel> insure(){
 
@@ -51,9 +55,13 @@ public class FrontController {
 
 		// 调用自己的服务
 		ProposalModel proposalModel = iFrontService.insure(account);
+
 		// 测试存储
 		User user =new User("neo","123456", UserSexEnum.MAN,"GoodMan");
 		userMapper.insert(user);
+
+		// 测试消息队列
+		helloSender.send();
 
 		DataSourceBuilder.create().build();
 		return Result.success(proposalModel);
