@@ -4,6 +4,8 @@ import com.xxxx.epeius.common.template.Result;
 import com.xxxx.epeius.front.model.User;
 import com.xxxx.epeius.front.struct.UserQueryCondition;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +25,8 @@ import java.util.List;
 public class UserController {
 
 	@GetMapping(value = "/user")
-	public Result<List<User>> query(@Valid UserQueryCondition condition){
+	public Result<List<User>> query(@Valid UserQueryCondition condition, @PageableDefault Pageable pageable){
+
 		return Result.success(Arrays.asList(
 				User.builder().userName("a").password("123").build(),
 				User.builder().userName("b").password("123").build()

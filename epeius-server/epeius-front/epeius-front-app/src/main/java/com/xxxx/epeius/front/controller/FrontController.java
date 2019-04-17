@@ -47,7 +47,7 @@ public class FrontController {
 		// 通过Feign 调用第三方微服务
 		UserModel userModel = iBackendService.getUser(UUID.randomUUID().toString()).getData();
 
-		//if(userModel != null) throw new RuntimeException("1111");
+		if(userModel != null) throw new RuntimeException("1111");
 
 		// 组织数据
 		AccountModel account =  AccountModel.builder().name(userModel.getName()).role(userModel.getRole())

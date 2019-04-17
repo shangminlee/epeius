@@ -17,4 +17,5 @@ public class HelloReceiver {
 	public void process(String neo) {
 		System.out.println("Receiver 1: " + neo);
 	}
+
 }
