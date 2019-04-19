@@ -8,7 +8,7 @@
         <dependency>
             <groupId>com.xxxx.epeius</groupId>
         	<artifactId>epeius-swagger</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
     2. 增加配置

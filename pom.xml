@@ -19,7 +19,7 @@
 
     <groupId>com.xxxx.epeius</groupId>
     <artifactId>epeius</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -29,6 +29,8 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
+
+		<epeius-project-version>1.0.0-SNAPSHOT</epeius-project-version>
 
 		<!-- Dependencies Properties -->
 		<lombok.version>1.16.18</lombok.version>
@@ -42,6 +44,7 @@
 
 	<dependencyManagement>
 		<dependencies>
+
 			<!-- spring cloud -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>

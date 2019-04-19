@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>epeius-basic</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -15,45 +15,10 @@
 
 	<dependencies>
 
-		<!-- spring web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<!-- 剔除 Tomcat -->
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-				<!--&lt;!&ndash; 剔除 LogBack &ndash;&gt;-->
-				<!--<exclusion>-->
-					<!--<groupId>org.springframework.boot</groupId>-->
-					<!--<artifactId>spring-boot-starter-logging</artifactId>-->
-				<!--</exclusion>-->
-			</exclusions>
-		</dependency>
-		<!-- 修改容器为 Undertow -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
-		</dependency>
-
-		<!--&lt;!&ndash; 修改日志为 log4j2 &ndash;&gt;-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-log4j2</artifactId>-->
-		<!--</dependency>-->
-
 		<!--- spring boot 管理-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<!-- eureka 服务端 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<!-- lombok -->

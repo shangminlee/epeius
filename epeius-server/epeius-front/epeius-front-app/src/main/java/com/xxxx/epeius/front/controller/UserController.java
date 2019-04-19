@@ -31,6 +31,7 @@ public class UserController {
 				User.builder().userName("a").password("123").build(),
 				User.builder().userName("b").password("123").build()
 		));
+
 	}
 
 	public Result register(){

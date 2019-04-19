@@ -3,7 +3,6 @@ package com.xxxx.epeius.front.controller;
 import com.xxxx.epeius.backend.struct.UserModel;
 import com.xxxx.epeius.common.template.Result;
 import com.xxxx.epeius.front.enums.UserSexEnum;
-import com.xxxx.epeius.front.mapper.UserMapper;
 import com.xxxx.epeius.front.model.User;
 import com.xxxx.epeius.front.sender.HelloSender;
 import com.xxxx.epeius.front.service.IBackendService;
@@ -11,7 +10,6 @@ import com.xxxx.epeius.front.service.IFrontService;
 import com.xxxx.epeius.front.struct.AccountModel;
 import com.xxxx.epeius.front.struct.ProposalModel;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,8 +33,8 @@ public class FrontController {
 	@Resource
 	private IBackendService iBackendService;
 
-	@Resource
-	private UserMapper userMapper;
+//	@Resource
+//	private UserMapper userMapper;
 
 	@Resource
 	private HelloSender helloSender;
@@ -58,12 +56,11 @@ public class FrontController {
 
 		// 测试存储
 		User user =new User("neo","123456", UserSexEnum.MAN,"GoodMan");
-		userMapper.insert(user);
+//		userMapper.insert(user);
 
 		// 测试消息队列
-		helloSender.send();
+		//helloSender.send();
 
-		DataSourceBuilder.create().build();
 		return Result.success(proposalModel);
 	}
 

@@ -2,8 +2,8 @@ spring:
   application:
     name: epeius-front
   datasource:
-    url: jdbc:mysql://192.168.43.32:3306/epeius?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: admin
+    url: jdbc:mysql://127.0.0.1:3306/epeius?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root #admin
     password: Abc_123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
@@ -65,10 +65,13 @@ management:
     health:
       show-details: always
 
-#---- Feign 配置 ---#
+#---- Feign 配置  epeius 配置---#
 epeius:
   feign:
     backend-service: epeius-backend
+  security:
+    browser:
+      loginPage: /epeius-login.html
 feign:
   hystrix:
     enabled: true
@@ -111,3 +114,4 @@ mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.xxxx.epeius.front.model
+

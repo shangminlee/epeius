@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>epeius-front</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -14,26 +14,38 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+
+		<!-- 注册中心 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
 		<!-- owner -->
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-front-struct</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-backend-struct</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-swagger</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-redis</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.xxxx.epeius</groupId>
+			<artifactId>epeius-security-browser</artifactId>
+			<version>${epeius-project-version}</version>
 		</dependency>
 
 		<!-- feign -->

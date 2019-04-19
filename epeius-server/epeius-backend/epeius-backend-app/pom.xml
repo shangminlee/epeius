@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>epeius-backend</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -15,28 +15,29 @@
 
 	<dependencies>
 
+		<!-- 注册中心 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
 		<!-- owner -->
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-backend-struct</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xxxx.epeius</groupId>
-			<artifactId>epeius-backend-service</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-swagger</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 
 		<!-- Rabbit MQ -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+		<!--</dependency>-->
 
 	</dependencies>
 

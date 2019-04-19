@@ -22,9 +22,9 @@ public class HelloSenderTest {
 
 	@Test
 	public void whenSendSuccess() {
-		for (int i = 0; i < 100; i++) {
-			helloSender.send();
-		}
-		helloSender.send();
+//		for (int i = 0; i < 100; i++) {
+//			helloSender.send();
+//		}
+//		helloSender.send();
 	}
 }

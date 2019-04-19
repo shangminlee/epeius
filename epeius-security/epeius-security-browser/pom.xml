@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>epeius-security</artifactId>
+		<groupId>com.xxxx.epeius</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>epeius-security-browser</artifactId>
+
+	<packaging>jar</packaging>
+
+	<dependencies>
+
+		<!-- 自定义Spring Security 核心 -->
+		<dependency>
+			<groupId>com.xxxx.epeius</groupId>
+			<artifactId>epeius-security-core</artifactId>
+			<version>${epeius-project-version}</version>
+		</dependency>
+
+		<!-- javax.servlet 由平台提供 provided -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<!-- owner -->
+		<dependency>
+			<groupId>com.xxxx.epeius</groupId>
+			<artifactId>epeius-common</artifactId>
+			<version>${epeius-project-version}</version>
+		</dependency>
+
+		<!-- apache commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<!-- fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+</project>

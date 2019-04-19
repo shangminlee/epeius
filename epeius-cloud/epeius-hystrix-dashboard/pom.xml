@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>epeius-cloud</artifactId>
 		<groupId>com.xxxx.epeius</groupId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -14,11 +14,31 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+
+		<!-- spring web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<!-- 剔除 Tomcat -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+
+			</exclusions>
+		</dependency>
+		<!-- 修改容器为 Undertow -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+
 		<!-- owner -->
 		<dependency>
 			<groupId>com.xxxx.epeius</groupId>
 			<artifactId>epeius-common</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>${epeius-project-version}</version>
 		</dependency>
 
 		<!-- 熔断监控 - hytrix dashboard -->
