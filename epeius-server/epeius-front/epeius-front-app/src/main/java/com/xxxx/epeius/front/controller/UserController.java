@@ -1,7 +1,7 @@
 package com.xxxx.epeius.front.controller;
 
 import com.xxxx.epeius.common.template.Result;
-import com.xxxx.epeius.front.model.User;
+import com.xxxx.epeius.front.entity.User;
 import com.xxxx.epeius.front.struct.UserQueryCondition;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;

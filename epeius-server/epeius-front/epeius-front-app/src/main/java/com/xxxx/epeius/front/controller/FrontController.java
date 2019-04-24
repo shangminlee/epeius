@@ -3,7 +3,7 @@ package com.xxxx.epeius.front.controller;
 import com.xxxx.epeius.backend.struct.UserModel;
 import com.xxxx.epeius.common.template.Result;
 import com.xxxx.epeius.front.enums.UserSexEnum;
-import com.xxxx.epeius.front.model.User;
+import com.xxxx.epeius.front.entity.User;
 import com.xxxx.epeius.front.sender.HelloSender;
 import com.xxxx.epeius.front.service.IBackendService;
 import com.xxxx.epeius.front.service.IFrontService;

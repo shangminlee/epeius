@@ -113,5 +113,5 @@ logging:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.xxxx.epeius.front.model
+  type-aliases-package: com.xxxx.epeius.front.entity
 

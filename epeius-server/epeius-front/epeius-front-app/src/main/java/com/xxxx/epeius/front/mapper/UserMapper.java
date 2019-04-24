@@ -1,6 +1,6 @@
 package com.xxxx.epeius.front.mapper;
 
-import com.xxxx.epeius.front.model.User;
+import com.xxxx.epeius.front.entity.User;
 import com.xxxx.epeius.front.param.UserParam;
 
 import java.util.List;

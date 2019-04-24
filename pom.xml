@@ -7,7 +7,6 @@
 		<module>epeius-server</module>
 		<module>epeius-basic</module>
 		<module>epeius-cloud</module>
-		<module>epeius-security</module>
 	</modules>
 
 	<parent>
@@ -27,7 +26,7 @@
 		<!-- Project Properties -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
 
 		<epeius-project-version>1.0.0-SNAPSHOT</epeius-project-version>

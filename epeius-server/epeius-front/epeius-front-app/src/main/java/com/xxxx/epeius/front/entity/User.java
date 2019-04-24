@@ -1,4 +1,4 @@
-package com.xxxx.epeius.front.model;
+package com.xxxx.epeius.front.entity;
 
 import com.xxxx.epeius.front.enums.UserSexEnum;
 import lombok.Builder;
