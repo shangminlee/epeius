@@ -3,7 +3,6 @@ package com.xxxx.epeius.backend;
 import com.xxxx.epeius.swagger.annotation.EnableEpeiusSwagger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * Description: 示例服务-3
@@ -11,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * Created: 2019-03-25 13:55
  */
 @SpringBootApplication
-@EnableEurekaClient
+//@EnableEurekaClient
 @EnableEpeiusSwagger
 public class BackendApplication {
 

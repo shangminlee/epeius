@@ -14,6 +14,7 @@
 	<modules>
 		<module>epeius-front</module>
 		<module>epeius-backend</module>
+		<module>epeius-admin</module>
 	</modules>
 
 </project>

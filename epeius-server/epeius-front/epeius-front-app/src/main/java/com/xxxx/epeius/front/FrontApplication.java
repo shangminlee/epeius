@@ -1,6 +1,5 @@
 package com.xxxx.epeius.front;
 
-import com.xxxx.epeius.security.browser.annotation.EnableEpeiusBrowserSecurity;
 import com.xxxx.epeius.swagger.annotation.EnableEpeiusSwagger;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +22,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableHystrix
 @MapperScan(basePackages = {"com.xxxx.epeius.front.mapper"})
 //@EnableEpeiusRedis
-@EnableEpeiusBrowserSecurity
 public class FrontApplication {
 
 	public static void main(String[] args) {
