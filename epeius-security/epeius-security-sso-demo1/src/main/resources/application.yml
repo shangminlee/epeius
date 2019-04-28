@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /client1
+
+security:
+  oauth2:
+    client:
+      client-id: epeius
+      client-secret: epeiusSecret
+      user-authorization-uri: http://127.0.0.1:9008/oauth/authorize
+      access-token-uri: http://127.0.0.1:9008/oauth/token
+    resource:
+      token-info-uri: http://127.0.0.1:9008/oauth/check_token
+      user-info-uri: http://127.0.0.1:9008/user
+#      jwt:
+#        key-uri: http://127.0.0.1:9008/oauth/token_key
+
+

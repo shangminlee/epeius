@@ -2,14 +2,15 @@ package com.xxxx.epeius.front.controller;
 
 import com.xxxx.epeius.backend.struct.UserModel;
 import com.xxxx.epeius.common.template.Result;
-import com.xxxx.epeius.front.enums.UserSexEnum;
 import com.xxxx.epeius.front.entity.User;
+import com.xxxx.epeius.front.enums.UserSexEnum;
 import com.xxxx.epeius.front.sender.HelloSender;
 import com.xxxx.epeius.front.service.IBackendService;
 import com.xxxx.epeius.front.service.IFrontService;
 import com.xxxx.epeius.front.struct.AccountModel;
 import com.xxxx.epeius.front.struct.ProposalModel;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -65,11 +66,11 @@ public class FrontController {
 	}
 
 	// 异常处理, 异常处理统一放到 handler 包下
-	// @ExceptionHandler
-	// public String doError(Exception ex) throws Exception{
-	//	 ex.printStackTrace();
-	//	 return ex.getMessage();
-	// }
+	 @ExceptionHandler
+	 public String doError(Exception ex) throws Exception{
+		 ex.printStackTrace();
+		 return ex.getMessage();
+	 }
 
 
 

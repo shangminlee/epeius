@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: epeius-security-auth
+  redis:
+    database: 0 # Redis 数据库索引（默认为 0）
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数
+        max-wait: 1000ms # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-idle: 8 # 连接池中的最大空闲连接 默认 8
+        min-idle: 0 # 连接池中的最小空闲连接 默认 0
+server:
+  port: 9008
+
+#---- 日志输出级别配置 -----#
+# 配置日志输出级别，将 Spring 框架设置为 INFO 级别，而我们所编写的代码设置为 DEBUG 级别
+logging:
+  level:
+    org.springframework: DEBUG
+    com.xxxx.epeius: DEBUG
+    com.zaxxer.hikari: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+  path: /Users/lishangmin/logs/securityAuth
+
+epeius:
+  security:
+    oauth2:
+      storeType: redis
